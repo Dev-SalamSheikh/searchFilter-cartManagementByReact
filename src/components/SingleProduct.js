@@ -9,8 +9,6 @@ const SingleProduct = ({ prod }) => {
     dispatch,
   } = CartState();
 
-  console.log(cart);
-
   return (
     <div className="products">
       <Card>
@@ -47,7 +45,6 @@ const SingleProduct = ({ prod }) => {
                   payload: prod,
                 });
               }}
-              style={{ marginLeft: "10px" }}
               variant="success"
             >
               Add to Cart
