@@ -1,6 +1,7 @@
 import React from "react";
 import { CartState } from "./context/Context";
 import Filter from "./Filter";
+import Header from "./Header";
 import SingleProduct from "./SingleProduct";
 import "./style.css";
 
@@ -35,14 +36,17 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
-      <Filter />
-      <div className="productContainer">
-        {transformProducts().map((prod) => {
-          return <SingleProduct prod={prod} key={prod.id} />;
-        })}
+    <>
+      <Header />
+      <div className="home">
+        <Filter />
+        <div className="productContainer">
+          {transformProducts().map((prod) => {
+            return <SingleProduct prod={prod} key={prod.id} />;
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

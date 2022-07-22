@@ -8,7 +8,6 @@ const Filter = () => {
     productState: { byFastDelivery, sort, byRating },
     productDispatch,
   } = CartState();
-  console.log(byFastDelivery, sort, byRating);
   return (
     <div className="filters">
       <span className="title">Filter Products</span>
